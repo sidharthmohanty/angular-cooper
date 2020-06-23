@@ -2,7 +2,7 @@
   class="navbar sticky-top flex-md-nowrap navbar-expand-lg d-flex justify-content-between"
 >
   <div class="">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" routerLink="#"
+    <a class="navbar-brand col-sm-2 col-md-2 mr-0" routerLink="#"
       >Cooper Surgical</a
     >
   </div>
@@ -20,74 +20,84 @@
   <div class="row">
     <nav
       class="col-md-2 d-none d-md-block bg-light sidebar collapse navbar-collapse"
-      id="navbarSupportedContent"
+      id="navbarToggleExternalContent"
     >
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="#">
-              <i class="fas fa-home"></i>
-              Home <span class="sr-only">(current)</span>
+            <a class="nav-link d-flex" href="#">
+              <span class="fas fa-home"></span>
+              <span>Home</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-file-alt"></i>
-              Add PGT Order
+            <a class="nav-link d-flex" href="#">
+              <span class="fas fa-file-alt"></span>
+              <span>
+                Add PGT Order
+              </span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-calendar-alt"></i>
-              Schedule Courier
+            <a class="nav-link d-flex" href="#">
+              <span class="fas fa-calendar-alt"></span>
+              <span>
+                Schedule Courier
+              </span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-file-upload"></i>
-              Submit Biopsy Information
+            <a class="nav-link d-flex" href="#">
+              <span class="fas fa-file-upload"></span>
+              <span>
+                Submit Biopsy Information
+              </span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-spinner"></i>
-              Pending PGT Results
+            <a class="nav-link d-flex" href="#">
+              <span class="fas fa-spinner"></span>
+              <span>
+                Pending PGT Results
+              </span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-cube"></i>
+            <a class="nav-link d-flex" href="#">
+              <span class="fas fa-cube"></span>
               <span>Reported PGT Results</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-signal"></i>
+            <a class="nav-link d-flex" href="#">
+              <span class="fas fa-signal"></span>
               <span>Analytics</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-medkit"></i>
-              Order Kits
+            <a class="nav-link d-flex" href="#">
+              <span class="fas fa-medkit"></span>
+              <span>
+                Order Kits
+              </span>
             </a>
           </li>
-          <div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
+          <div></div>
         </ul>
       </div>
     </nav>
+    <button
+      class="navbar-toggler float-right position-absolute"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent"
+      aria-expanded="true"
+      aria-label="Toggle navigation"
+    >
+      <span class="toggle">&lt;</span>
+    </button>
+
     <main role="main" class="col-md-10 ml-sm-auto col-lg-10 main">
       <div class="row content-holder">
         <div class="notifications col-md-6">

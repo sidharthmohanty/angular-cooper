@@ -133,7 +133,7 @@ footer {
 .footer-row {
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: 0 px;
 }
 .fas {
   padding-right: 5px;
@@ -145,4 +145,11 @@ footer {
 
 .logo {
   width: 40px;
+}
+
+.fa-bars {
+  color: #156699;
+}
+.toggle {
+  color: wheat;
 }
