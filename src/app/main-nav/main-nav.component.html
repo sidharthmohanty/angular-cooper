@@ -3,106 +3,116 @@
 >
   <div class="">
     <a class="navbar-brand col-sm-2 col-md-2 mr-0" routerLink="#"
-      >Cooper Surgical</a
-    >
+      ><img
+        src="../../assets/logo/logo-cooper-blue.png"
+        alt=""
+        class="brand-logo"
+    /></a>
   </div>
-  <div class="">
-    <span class="mr-3">
-      <img src="../../assets/images/clinic-logo.jpg" alt="" class="logo" />
-      <span>Clinic Logo</span>
-    </span>
-
-    <i class="fas fa-bars"></i>
+  <div class="d-flex">
+    <div class="clinic">
+      <img src="../../assets/logo/ClinicLogo.png" alt="" class="logo" />
+    </div>
+    <div class="">
+      <!-- <img src="../../assets/svg/sub-menu.svg" alt="" /> -->
+      <ion-icon src="../../assets/svg/sub-menu.svg"></ion-icon>
+    </div>
   </div>
 </nav>
 
 <div class="container-fluid">
+  <a
+    type="button"
+    id="right-icon"
+    aria-expanded="false"
+    (click)="toggle()"
+    [class]="rightIcon"
+  >
+    <span class="material-icons right">
+      chevron_right
+    </span>
+  </a>
   <div class="row">
-    <nav
-      class="col-md-2 d-none d-md-block bg-light sidebar collapse navbar-collapse"
-      id="navbarToggleExternalContent"
-    >
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link d-flex" href="#">
-              <span class="fas fa-home"></span>
-              <span>Home</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex" href="#">
-              <span class="fas fa-file-alt"></span>
-              <span>
-                Add PGT Order
-              </span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex" href="#">
-              <span class="fas fa-calendar-alt"></span>
-              <span>
-                Schedule Courier
-              </span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex" href="#">
-              <span class="fas fa-file-upload"></span>
-              <span>
-                Submit Biopsy Information
-              </span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex" href="#">
-              <span class="fas fa-spinner"></span>
-              <span>
-                Pending PGT Results
-              </span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex" href="#">
-              <span class="fas fa-cube"></span>
-              <span>Reported PGT Results</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex" href="#">
-              <span class="fas fa-signal"></span>
-              <span>Analytics</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex" href="#">
-              <span class="fas fa-medkit"></span>
-              <span>
-                Order Kits
-              </span>
-            </a>
-          </li>
-          <div></div>
-        </ul>
+    <div [class]="toggleClass">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="#">
+            <span class="fas fa-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="#">
+            <span class="fas fa-file-alt"></span>
+            <span>
+              Add PGT Order
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="#">
+            <span class="fas fa-calendar-alt"></span>
+            <span>
+              Schedule Courier
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="#">
+            <span class="fas fa-file-upload"></span>
+            <span>
+              Submit Biopsy Information
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="#">
+            <span class="fas fa-spinner"></span>
+            <span>
+              Pending PGT Results
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="#">
+            <span class="fas fa-cube"></span>
+            <span>Reported PGT Results</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="#">
+            <span class="fas fa-signal"></span>
+            <span>Analytics</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="#">
+            <span class="fas fa-medkit"></span>
+            <span>
+              Order Kits
+            </span>
+          </a>
+        </li>
+      </ul>
+      <div class="toggle">
+        <a
+          type="button"
+          id="sidebar"
+          aria-expanded="false"
+          class="float-right"
+          (click)="toggle()"
+        >
+          <span class="material-icons">
+            chevron_left
+          </span>
+        </a>
       </div>
-    </nav>
-    <button
-      class="navbar-toggler float-right position-absolute"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarToggleExternalContent"
-      aria-controls="navbarToggleExternalContent"
-      aria-expanded="true"
-      aria-label="Toggle navigation"
-    >
-      <span class="toggle">&lt;</span>
-    </button>
-
-    <main role="main" class="col-md-10 ml-sm-auto col-lg-10 main">
+    </div>
+    <main class="col-md-10 col-lg-10 main">
       <div class="row content-holder">
         <div class="notifications col-md-6">
           <div class="card-header head-text">Notifications</div>
-          <div class="d-flex mt-5 ml-4">
+          <div class="d-flex not-content">
             <div class="d-flex flex-column">
               <p class="sub-head">45</p>
               <div class="sub-content">Reported PGT Cases</div>
@@ -122,21 +132,30 @@
         </div>
         <div class="analytics col-md-6">
           <div class="card-header head-text">Analytics</div>
-        </div>
-      </div>
-      <div class="row footer-row">
-        <footer>
-          <div class="footer-image-container">
+          <div class="">
             <img
-              src="../../assets/images/footer-image.jpg"
-              alt="image"
-              class="footer-image"
+              src="../../assets/images/analytics.png"
+              alt="analytics"
+              class="chart"
             />
           </div>
-          <div class="artisan">
-            Powered by @artisan
-          </div>
-        </footer>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <footer>
+            <div class="footer-image-container">
+              <img
+                src="../../assets/images/footer-image.jpg"
+                alt="image"
+                class="footer-image"
+              />
+            </div>
+            <div class="artisan">
+              Powered by @artisan
+            </div>
+          </footer>
+        </div>
       </div>
     </main>
   </div>

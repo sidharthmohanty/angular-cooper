@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@fortawesome/fontawesome-free/css/all.css";
+:root {
+  --mainBlue: #0f5cab;
+  --borderBlue: #a2e1f4;
+  --lightBlue: #3cafdb;
+  --headTextLigtBlue: #64b6de;
+  --headTextDarkBlue: #156699;
+}
 html,
 body {
   height: 100%;
@@ -8,3 +15,7 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+/*var(--mainBlue);
+*
+*/
