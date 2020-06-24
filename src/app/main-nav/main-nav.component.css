@@ -8,9 +8,9 @@
   padding: 0px !important;
   position: fixed;
   height: 100%;
-  max-width: 140px !important;
+  max-width: 125px !important;
   overflow: auto;
-  width: 15%;
+  width: 17%;
 }
 .nav-item > a {
   color: whitesmoke !important;
@@ -23,10 +23,30 @@
 }
 
 .clinic {
-  margin: -15px 33px -25px 0px;
+  margin: -9px -24px -31px 0px;
 }
 .sub-menu {
   color: var(--mainBlue);
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+.side-info {
+  font-size: 1.2rem;
+}
+.side-results {
+  font-size: 1.2rem;
+}
+.side-pgt {
+  font-size: 1.2rem;
+}
+.side-analytics {
+  font-size: 1rem;
+}
+.side-kits {
+  font-size: 1rem;
+}
+.know {
+  font-size: 1rem;
 }
 .nav-item {
   border-bottom: 1px solid var(--borderBlue);
@@ -88,7 +108,10 @@
 .artisan {
   display: flex;
   justify-content: center;
-  margin-top: 4%;
+  margin-top: 1rem;
+}
+.artisan-logo {
+  height: 1rem;
 }
 .notifications {
   padding: 20px 0px;
@@ -145,13 +168,13 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 11rem;
 }
 .fas {
   padding-right: 5px;
 }
 .logo {
-  height: 80%;
+  height: 72%;
 }
 
 .fa-bars {
@@ -232,7 +255,7 @@ footer {
     min-width: 89%;
   }
   .main {
-    margin-left: 7rem;
+    margin-left: 8rem;
   }
   .sub-head {
     font-size: 4rem;
@@ -250,6 +273,12 @@ footer {
   .notifications {
     padding: 20px 15px;
   }
+  .sidebar {
+    width: 18%;
+  }
+  footer {
+    margin-top: 1rem;
+  }
 }
 @media (max-width: 550px) {
   .col-md-2 {
@@ -259,7 +288,7 @@ footer {
     z-index: 1;
   }
   .main {
-    margin-left: 2rem;
+    margin-left: 3rem;
   }
   .content-holder {
     width: 120%;
@@ -283,7 +312,8 @@ footer {
     margin-bottom: 10px;
   }
   footer {
-    left: 1.7rem !important;
+    margin-top: 3rem;
+    width: 19.5rem;
   }
   .artisan {
     margin-top: 7%;
