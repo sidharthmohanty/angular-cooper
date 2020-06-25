@@ -1,5 +1,6 @@
 .navbar {
   position: sticky;
+  width: 100%;
   background-color: #e6f7fc !important;
   border-bottom: 2px solid #a2e1f4;
 }
@@ -11,13 +12,23 @@
   max-width: 125px !important;
   overflow: auto;
   width: 17%;
+  z-index: 1;
 }
 .nav-item > a {
   color: whitesmoke !important;
-  font-weight: lighter;
-  font-size: 12px;
+  font-size: 0.8rem;
   line-height: normal;
 }
+
+.toggle-in {
+  color: white;
+  transform: rotate(90deg);
+}
+.toggle-out {
+  transform: rotate(-90deg);
+  color: var(--headTextLigtBlue);
+}
+
 .brand-logo {
   width: 75%;
 }
@@ -58,7 +69,10 @@
 
 .nav-item:hover {
   background-color: var(--lightBlue);
-  font-weight: 700;
+}
+.nav-item:hover .side-label {
+  color: white;
+  font-weight: bold;
 }
 
 .nav-link {
@@ -108,10 +122,12 @@
 .artisan {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }
 .artisan-logo {
-  height: 1rem;
+  height: 0.8rem;
 }
 .notifications {
   padding: 20px 0px;
@@ -121,32 +137,33 @@
 }
 .head-text {
   font-size: 30px;
-  font-weight: 100;
   color: var(--headTextLigtBlue);
 }
 
 .sub-head {
   font-size: 4rem;
-  font-weight: 500;
   color: var(--headTextDarkBlue);
   border-bottom: 1px solid lightgray;
-  margin-right: 3rem !important;
+  margin-right: 3rem;
   padding-bottom: 1.5rem !important;
 }
 .sub-content {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--headTextDarkBlue);
-  font-weight: 200;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   border-bottom: 1px solid lightgray;
   margin-right: 3rem;
   padding-bottom: 2rem;
   height: 4rem;
+  padding-right: 1rem;
 }
 .know-more {
+  justify-content: center;
+  align-items: center;
   color: var(--headTextLigtBlue);
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 40px;
+  justify-content: flex-start;
 }
 
 .image-container {
@@ -160,15 +177,11 @@
   justify-content: center;
 }
 .footer-image {
-  width: 23rem;
+  width: 25rem;
   border-radius: 5px;
-  height: 4rem;
 }
-footer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 11rem;
+.footer {
+  height: 63%;
 }
 .fas {
   padding-right: 5px;
@@ -181,8 +194,7 @@ footer {
   color: var(--headTextDarkBlue);
 }
 .toggle {
-  color: white;
-  font-size: 20;
+  padding: 10px 10px 0px 0px;
 }
 
 .example-sidenav-content {
@@ -205,7 +217,10 @@ footer {
 .chart {
   width: 100%;
 }
-@media (max-width: 500px) {
+.sticky-top {
+  position: sticky !important;
+}
+/* @media (max-width: 500px) {
   .content-holder {
     margin-top: 4%;
   }
@@ -218,18 +233,25 @@ footer {
   .sidebar {
     width: 30%;
   }
-
   .not-content {
     margin-left: 0.5rem;
   }
+} */
+@media (max-width: 1450px) {
+  .footer {
+    height: 40%;
+  }
 }
-
-@media (min-width: 1024px) {
+@media (max-width: 1250px) {
   .col-lg-10 {
     flex: 0 0 87% !important;
     max-width: 87% !important;
   }
+  .footer {
+    height: 40%;
+  }
 }
+
 @media (max-width: 1023px) {
   .col-md-10 {
     flex: 0 0 83% !important;
@@ -243,7 +265,7 @@ footer {
   }
   .sub-head {
     font-size: 3rem;
-    margin-right: 1rem !important;
+    margin-right: 1rem;
   }
   .sub-content {
     margin-right: 1rem;
@@ -259,8 +281,8 @@ footer {
   }
   .sub-head {
     font-size: 4rem;
-    margin-right: 3rem !important;
-    padding-bottom: 2.5rem !important;
+    margin-right: 3rem;
+    padding-bottom: 2.5rem;
   }
   .sub-content {
     margin-right: 3rem;
@@ -276,27 +298,24 @@ footer {
   .sidebar {
     width: 18%;
   }
-  footer {
-    margin-top: 1rem;
+  .footer {
+    height: 20%;
   }
 }
 @media (max-width: 550px) {
   .col-md-2 {
     min-width: 150px;
   }
-  .sidebar {
-    z-index: 1;
-  }
   .main {
     margin-left: 3rem;
+    margin-top: 11%;
   }
   .content-holder {
     width: 120%;
-    margin-top: 11%;
   }
   .sub-head {
     font-size: 3rem;
-    margin-right: 1.5rem !important;
+    margin-right: 1.5rem;
   }
   .sub-content {
     margin-right: 1.5rem;
@@ -310,12 +329,70 @@ footer {
   }
   .know-more {
     margin-bottom: 10px;
+    justify-content: flex-start;
   }
-  footer {
-    margin-top: 3rem;
-    width: 19.5rem;
+  .footer {
+    margin-top: 2rem;
+    width: 118%;
   }
   .artisan {
     margin-top: 7%;
+  }
+}
+@media (max-width: 450px) {
+  .footer {
+    width: 105%;
+    position: absolute;
+    margin-top: 0;
+    display: flex;
+    height: 40%;
+  }
+  .footer-container {
+    padding: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .sub-head {
+    font-size: 1.7rem;
+    padding-bottom: 1.5;
+    padding-right: 1rem;
+    margin-right: 0.5rem;
+  }
+  .sub-content {
+    margin-right: 0.8rem;
+    font-size: 0.7rem;
+    padding-bottom: 0;
+    padding-right: 0rem;
+    height: 3rem;
+  }
+  .not-content {
+    margin-top: 1rem;
+  }
+
+  .know-more {
+    margin-top: 0px;
+    font-size: 0.7rem;
+  }
+  .material-icons {
+    font-size: 1rem;
+  }
+  .notifications {
+    padding: 0px 0px 10px 0px;
+  }
+  .analytics {
+    padding: 0px 0px 10px 0px;
+  }
+  .analytics-content {
+    margin-top: 1rem;
+  }
+
+  .head-text {
+    font-size: 1.2rem;
+  }
+  .artisan {
+    margin-top: 4%;
+  }
+  .navbar {
+    flex-wrap: nowrap;
   }
 }

@@ -27,12 +27,16 @@
     (click)="toggle()"
     [class]="rightIcon"
   >
-    <span class="material-icons right">
-      chevron_right
-    </span>
+    <ion-icon
+      src="../../assets/svg/dropdown-arrow.svg"
+      class="toggle-out mt-2"
+    ></ion-icon>
   </a>
   <div class="row">
-    <div [class]="toggleClass">
+    <div
+      class="col-md-2 col-sm-2 col-lg-2 bg-light sidebar collapse navbar-collapse"
+      [style]="display"
+    >
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link d-flex" href="#">
@@ -40,7 +44,7 @@
               src="../../assets/svg/vector.svg"
               class="side-home"
             ></ion-icon>
-            <span class="ml-2">Home</span>
+            <span class="ml-2 pt-book side-label">Home</span>
           </a>
         </li>
         <li class="nav-item">
@@ -49,7 +53,7 @@
               src="../../assets/svg/half_square.svg"
               class="side-order"
             ></ion-icon>
-            <span class="ml-2">
+            <span class="ml-2 pt-book side-label">
               Add PGT Order
             </span>
           </a>
@@ -60,7 +64,7 @@
               src="../../assets/svg/calendar.svg"
               class="side-courier"
             ></ion-icon>
-            <span class="ml-2">
+            <span class="ml-2 pt-book side-label">
               Schedule Courier
             </span>
           </a>
@@ -71,7 +75,7 @@
               src="../../assets/svg/copy.svg"
               class="side-info"
             ></ion-icon>
-            <span class="ml-2">
+            <span class="ml-2 pt-book side-label">
               Submit Biopsy Information
             </span>
           </a>
@@ -82,7 +86,7 @@
               src="../../assets/svg/reload.svg"
               class="side-results"
             ></ion-icon>
-            <span class="ml-2">
+            <span class="ml-2 pt-book side-label">
               Pending PGT Results
             </span>
           </a>
@@ -93,7 +97,7 @@
               src="../../assets/svg/hexagon.svg"
               class="side-pgt"
             ></ion-icon>
-            <span class="ml-2">Reported PGT Results</span>
+            <span class="ml-2 pt-book side-label">Reported PGT Results</span>
           </a>
         </li>
         <li class="nav-item">
@@ -102,7 +106,7 @@
               src="../../assets/svg/signal.svg"
               class="side-analytics"
             ></ion-icon>
-            <span class="ml-2">Analytics</span>
+            <span class="ml-2 pt-book side-label">Analytics</span>
           </a>
         </li>
         <li class="nav-item">
@@ -111,7 +115,7 @@
               src="../../assets/svg/kits.svg"
               class="side-kits"
             ></ion-icon>
-            <span class="ml-2">
+            <span class="ml-2 pt-book side-label">
               Order Kits
             </span>
           </a>
@@ -125,52 +129,56 @@
           class="float-right"
           (click)="toggle()"
         >
-          <span class="material-icons">
-            chevron_left
-          </span>
+          <ion-icon
+            src="../../assets/svg/dropdown-arrow.svg"
+            class="toggle-in"
+          ></ion-icon>
         </a>
       </div>
     </div>
     <main class="col-md-10 col-lg-10 main">
       <div class="row content-holder">
         <div class="notifications col-md-6">
-          <div class="card-header head-text">Notifications</div>
+          <div class="card-header head-text pt-light">Notifications</div>
           <div class="d-flex not-content">
             <div class="d-flex flex-column">
-              <p class="sub-head">45</p>
-              <div class="sub-content">Reported PGT Cases</div>
+              <div class="sub-head pt-demi">45</div>
+              <div class="sub-content pt-book">Reported PGT Cases</div>
               <div class="know-more d-flex">
-                <span class="mt-2">Know more</span>
-                <span class="material-icons know">
-                  chevron_right
-                </span>
+                <span class="mt-1 pt-book">Know more</span>
+                <ion-icon
+                  src="../../assets/svg/dropdown-arrow.svg"
+                  class="toggle-out mt-2 ml-1"
+                ></ion-icon>
               </div>
             </div>
             <div class="d-flex flex-column">
-              <p class="sub-head">55</p>
-              <div class="sub-content">Reported PGT Cases</div>
+              <div class="sub-head pt-demi">55</div>
+              <div class="sub-content pt-book">Pending PGT Cases</div>
               <div class="know-more d-flex">
-                <span class="mt-2">Know more</span>
-                <span class="material-icons know">
-                  chevron_right
-                </span>
+                <span class="mt-1 pt-book">Know more</span>
+                <ion-icon
+                  src="../../assets/svg/dropdown-arrow.svg"
+                  class="toggle-out mt-2 ml-1"
+                ></ion-icon>
               </div>
             </div>
             <div class="d-flex flex-column">
-              <p class="sub-head">10K<sup>+</sup></p>
-              <div class="sub-content">Reported PGT Cases</div>
+              <div class="sub-head pt-demi">10K<sup>+</sup></div>
+              <div class="sub-content pt-book">Euploid Embryos</div>
               <div class="know-more d-flex">
-                <span class="mt-2">Know more</span>
-                <span class="material-icons know">
-                  chevron_right
-                </span>
+                <span class="mt-1 pt-book">Know more</span>
+                <ion-icon
+                  src="../../assets/svg/dropdown-arrow.svg"
+                  class="toggle-out mt-2 ml-1"
+                ></ion-icon>
               </div>
             </div>
           </div>
         </div>
         <div class="analytics col-md-6">
-          <div class="card-header head-text">Analytics</div>
-          <div class="">
+          <div class="card-header head-text pt-light">Analytics</div>
+          <div class="analytics-content">
             <img
               src="../../assets/images/analytics.png"
               alt="analytics"
@@ -179,25 +187,26 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12 col-lg-12">
-          <footer>
-            <div class="footer-image-container">
-              <img
-                src="../../assets/images/footer-image.jpg"
-                alt="image"
-                class="footer-image"
-              />
-            </div>
-            <div class="artisan">
-              Powered by
-              <img
-                src="../../assets/logo/artisan-logo.png"
-                alt=""
-                class="artisan-logo"
-              />
-            </div>
-          </footer>
+      <!-- <div class="row  footer"> -->
+
+      <div class="row footer align-items-end">
+        <div class="col-md-12 col-lg-12 footer-container">
+          <div class="footer-image-container">
+            <img
+              src="../../assets/logo/banner.png"
+              alt="image"
+              class="footer-image"
+            />
+          </div>
+          <div class="artisan">
+            <span class="pt-book text-muted">Powered by </span>
+
+            <img
+              src="../../assets/logo/artisan-logo.png"
+              alt=""
+              class="artisan-logo"
+            />
+          </div>
         </div>
       </div>
     </main>

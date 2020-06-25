@@ -1,4 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  ViewEncapsulation,
+  OnInit,
+  HostListener,
+} from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -9,30 +14,56 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./main-nav.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class MainNavComponent {
-  rightIcon = 'd-none';
+export class MainNavComponent implements OnInit {
+  rightIcon;
   block = 'd-block';
   hide = 'd-none';
-  toggleDisplay =
-    'col-md-2 col-sm-2 col-lg-2 d-block bg-light sidebar collapse navbar-collapse';
-  toggleHide =
-    'col-md-2 bg-light col-md-2 col-sm-2 col-lg-2 d-none sidebar collapse navbar-collapse';
-  toggleClass = this.toggleDisplay;
+
+  blockStyle = {
+    display: 'block',
+  };
+  hideStyle = {
+    display: 'none',
+  };
+
+  display;
+
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(
       map((result) => result.matches),
       shareReplay()
     );
+  public screenWidth: any;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
-
-  toggle() {
-    if (this.toggleClass === this.toggleDisplay) {
-      this.toggleClass = this.toggleHide;
+  ngOnInit() {
+    this.screenWidth = window.innerWidth;
+    if (this.screenWidth < 550) {
+      this.display = this.hideStyle;
       this.rightIcon = this.block;
     } else {
-      this.toggleClass = this.toggleDisplay;
+      this.display = this.blockStyle;
+      this.rightIcon = this.hide;
+    }
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.screenWidth = window.innerWidth;
+    if (this.screenWidth < 550) {
+      this.display = this.hideStyle;
+      this.rightIcon = this.block;
+    } else {
+      this.display = this.blockStyle;
+      this.rightIcon = this.hide;
+    }
+  }
+  toggle() {
+    if (this.display === this.blockStyle) {
+      this.display = this.hideStyle;
+      this.rightIcon = this.block;
+    } else {
+      this.display = this.blockStyle;
       this.rightIcon = this.hide;
     }
   }

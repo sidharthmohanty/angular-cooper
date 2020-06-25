@@ -4,18 +4,94 @@
   --mainBlue: #0f5cab;
   --borderBlue: #a2e1f4;
   --lightBlue: #3cafdb;
-  --headTextLigtBlue: #64b6de;
+  --headTextLigtBlue: #4ca0b1;
   --headTextDarkBlue: #156699;
 }
+@font-face {
+  font-family: ptLight;
+  src: url(./assets/fonts/futura_pt/FTN35.ttf);
+}
+@font-face {
+  font-family: ptBook;
+  src: url(./assets/fonts/futura_pt/FTN45.ttf);
+}
+@font-face {
+  font-family: ptMedium;
+  src: url(./assets/fonts/futura_pt/FTN55.ttf);
+}
+@font-face {
+  font-family: ptDemi;
+  src: url(./assets/fonts/futura_pt/FTN65.ttf);
+}
+@font-face {
+  font-family: ptBold;
+  src: url(./assets/fonts/futura_pt/FTN85.ttf);
+}
+@font-face {
+  font-family: ptExtraBold;
+  src: url(./assets/fonts/futura_pt/FTN95.ttf);
+}
+@font-face {
+  font-family: ptHeavy;
+  src: url(./assets/fonts/futura_pt/FTN75.ttf);
+}
+@font-face {
+  font-family: ptCondensedBook;
+  src: url(./assets/fonts/futura_pt/FTN47.ttf);
+}
+@font-face {
+  font-family: ptCondensedMedium;
+  src: url(./assets/fonts/futura_pt/FTN57.ttf);
+}
+@font-face {
+  font-family: ptCondensedBold;
+  src: url(./assets/fonts/futura_pt/FTN87.ttf);
+}
+@font-face {
+  font-family: ptCondensedExtraBold;
+  src: url(./assets/fonts/futura_pt/FTN97.ttf);
+}
+
+.pt-light {
+  font-family: ptLight;
+}
+.pt-book {
+  font-family: ptBook;
+}
+.pt-medium {
+  font-family: ptMedium;
+}
+.pt-demi {
+  font-family: ptDemi;
+}
+.pt-bold {
+  font-family: ptBold;
+}
+.pt-extrabold {
+  font-family: ptExtraBold;
+}
+.pt-heavy {
+  font-family: ptHeavy;
+}
+
+.pt-condensed-book {
+  font-family: ptCondensedBook;
+}
+
+.pt-condensed-medium {
+  font-family: ptCondensedMedium;
+}
+.pt-condensed-bold {
+  font-family: ptCondensedBold;
+}
+.pt-condensed-extra-bold {
+  font-family: ptCondensedExtraBold;
+}
+
 html,
 body {
   height: 100%;
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
-/*var(--mainBlue);
-*
-*/
