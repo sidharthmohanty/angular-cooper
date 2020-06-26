@@ -16,17 +16,14 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class MainNavComponent implements OnInit {
   rightIcon;
+  sideIcon;
+  toggleSide;
+  toggleIn = 'toggle-in';
+  toggleOut = 'toggle-out';
+  hideSideIcon = 'ml-2 pt-book side-label d-none';
+  showSideIcon = 'ml-2 pt-book side-label';
   block = 'd-block';
   hide = 'd-none';
-
-  blockStyle = {
-    display: 'block',
-  };
-  hideStyle = {
-    display: 'none',
-  };
-
-  display;
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -40,31 +37,31 @@ export class MainNavComponent implements OnInit {
   ngOnInit() {
     this.screenWidth = window.innerWidth;
     if (this.screenWidth < 550) {
-      this.display = this.hideStyle;
-      this.rightIcon = this.block;
+      this.sideIcon = this.hideSideIcon;
+      this.toggleSide = this.toggleOut;
     } else {
-      this.display = this.blockStyle;
-      this.rightIcon = this.hide;
+      this.sideIcon = this.showSideIcon;
+      this.toggleSide = this.toggleIn;
     }
   }
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.screenWidth = window.innerWidth;
     if (this.screenWidth < 550) {
-      this.display = this.hideStyle;
-      this.rightIcon = this.block;
+      this.sideIcon = this.hideSideIcon;
+      this.toggleSide = this.toggleOut;
     } else {
-      this.display = this.blockStyle;
-      this.rightIcon = this.hide;
+      this.sideIcon = this.showSideIcon;
+      this.toggleSide = this.toggleIn;
     }
   }
   toggle() {
-    if (this.display === this.blockStyle) {
-      this.display = this.hideStyle;
-      this.rightIcon = this.block;
+    if (this.sideIcon === this.showSideIcon) {
+      this.sideIcon = this.hideSideIcon;
+      this.toggleSide = this.toggleOut;
     } else {
-      this.display = this.blockStyle;
-      this.rightIcon = this.hide;
+      this.sideIcon = this.showSideIcon;
+      this.toggleSide = this.toggleIn;
     }
   }
 }

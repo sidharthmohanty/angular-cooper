@@ -1,26 +1,28 @@
-<nav
-  class="navbar sticky-top flex-md-nowrap navbar-expand-lg d-flex justify-content-between"
->
-  <div class="">
-    <a class="navbar-brand col-sm-2 col-md-2 mr-0" routerLink="#"
-      ><img
-        src="../../assets/logo/logo-cooper-blue.png"
-        alt=""
-        class="brand-logo"
-    /></a>
-  </div>
-  <div class="d-flex">
-    <div class="clinic">
-      <img src="../../assets/logo/ClinicLogo.png" alt="" class="logo" />
-    </div>
+<div class="min-vh-100">
+  <nav
+    class="navbar sticky-top flex-md-nowrap navbar-expand-lg d-flex justify-content-between"
+  >
     <div class="">
-      <ion-icon src="../../assets/svg/sub-menu.svg" class="sub-menu"></ion-icon>
+      <a class="navbar-brand col-sm-2 col-md-2 mr-0" routerLink="#"
+        ><img
+          src="../../assets/logo/logo-cooper-blue.png"
+          alt=""
+          class="brand-logo"
+      /></a>
     </div>
-  </div>
-</nav>
-
-<div class="container-fluid">
-  <a
+    <div class="d-flex">
+      <div class="clinic">
+        <img src="../../assets/logo/ClinicLogo.png" alt="" class="logo" />
+      </div>
+      <div class="">
+        <ion-icon
+          src="../../assets/svg/sub-menu.svg"
+          class="sub-menu"
+        ></ion-icon>
+      </div>
+    </div>
+  </nav>
+  <!-- <a
     type="button"
     id="right-icon"
     aria-expanded="false"
@@ -31,12 +33,9 @@
       src="../../assets/svg/dropdown-arrow.svg"
       class="toggle-out mt-2"
     ></ion-icon>
-  </a>
-  <div class="row">
-    <div
-      class="col-md-2 col-sm-2 col-lg-2 bg-light sidebar collapse navbar-collapse"
-      [style]="display"
-    >
+  </a> -->
+  <div class="d-flex">
+    <div class="bg-light sidebar">
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link d-flex" href="#">
@@ -44,7 +43,7 @@
               src="../../assets/svg/vector.svg"
               class="side-home"
             ></ion-icon>
-            <span class="ml-2 pt-book side-label">Home</span>
+            <span [class]="sideIcon">Home</span>
           </a>
         </li>
         <li class="nav-item">
@@ -53,7 +52,7 @@
               src="../../assets/svg/half_square.svg"
               class="side-order"
             ></ion-icon>
-            <span class="ml-2 pt-book side-label">
+            <span [class]="sideIcon">
               Add PGT Order
             </span>
           </a>
@@ -64,7 +63,7 @@
               src="../../assets/svg/calendar.svg"
               class="side-courier"
             ></ion-icon>
-            <span class="ml-2 pt-book side-label">
+            <span [class]="sideIcon">
               Schedule Courier
             </span>
           </a>
@@ -75,7 +74,7 @@
               src="../../assets/svg/copy.svg"
               class="side-info"
             ></ion-icon>
-            <span class="ml-2 pt-book side-label">
+            <span [class]="sideIcon">
               Submit Biopsy Information
             </span>
           </a>
@@ -86,7 +85,7 @@
               src="../../assets/svg/reload.svg"
               class="side-results"
             ></ion-icon>
-            <span class="ml-2 pt-book side-label">
+            <span [class]="sideIcon">
               Pending PGT Results
             </span>
           </a>
@@ -97,7 +96,7 @@
               src="../../assets/svg/hexagon.svg"
               class="side-pgt"
             ></ion-icon>
-            <span class="ml-2 pt-book side-label">Reported PGT Results</span>
+            <span [class]="sideIcon">Reported PGT Results</span>
           </a>
         </li>
         <li class="nav-item">
@@ -106,7 +105,7 @@
               src="../../assets/svg/signal.svg"
               class="side-analytics"
             ></ion-icon>
-            <span class="ml-2 pt-book side-label">Analytics</span>
+            <span [class]="sideIcon">Analytics</span>
           </a>
         </li>
         <li class="nav-item">
@@ -115,7 +114,7 @@
               src="../../assets/svg/kits.svg"
               class="side-kits"
             ></ion-icon>
-            <span class="ml-2 pt-book side-label">
+            <span [class]="sideIcon">
               Order Kits
             </span>
           </a>
@@ -131,13 +130,13 @@
         >
           <ion-icon
             src="../../assets/svg/dropdown-arrow.svg"
-            class="toggle-in"
+            [class]="toggleSide"
           ></ion-icon>
         </a>
       </div>
     </div>
-    <main class="col-md-10 col-lg-10 main">
-      <div class="row content-holder">
+    <main class="main d-flex flex-column">
+      <div class="d-flex content-holder">
         <div class="notifications col-md-6">
           <div class="card-header head-text pt-light">Notifications</div>
           <div class="d-flex not-content">
@@ -148,7 +147,7 @@
                 <span class="mt-1 pt-book">Know more</span>
                 <ion-icon
                   src="../../assets/svg/dropdown-arrow.svg"
-                  class="toggle-out mt-2 ml-1"
+                  class="toggle-out mt-2 ml-1 dropdown"
                 ></ion-icon>
               </div>
             </div>
@@ -187,17 +186,18 @@
           </div>
         </div>
       </div>
-      <!-- <div class="row  footer"> -->
-
-      <div class="row footer align-items-end">
-        <div class="col-md-12 col-lg-12 footer-container">
-          <div class="footer-image-container">
-            <img
-              src="../../assets/logo/banner.png"
-              alt="image"
-              class="footer-image"
-            />
-          </div>
+      <!--Banner container-->
+      <div class="d-flex justify-content-center mt-5">
+        <div class="footer-image-container">
+          <img
+            src="../../assets/logo/banner.png"
+            alt="image"
+            class="footer-image"
+          />
+        </div>
+      </div>
+      <div class="d-flex mt-auto justify-content-center">
+        <footer>
           <div class="artisan">
             <span class="pt-book text-muted">Powered by </span>
 
@@ -207,7 +207,7 @@
               class="artisan-logo"
             />
           </div>
-        </div>
+        </footer>
       </div>
     </main>
   </div>
