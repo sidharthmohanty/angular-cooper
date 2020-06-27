@@ -20,8 +20,8 @@ export class MainNavComponent implements OnInit {
   toggleSide;
   toggleIn = 'toggle-in';
   toggleOut = 'toggle-out';
-  hideSideIcon = 'ml-2 pt-book side-label d-none';
-  showSideIcon = 'ml-2 pt-book side-label';
+  hideSideIcon = 'd-none';
+  showSideIcon = 'ml-2 pt-light side-label';
   block = 'd-block';
   hide = 'd-none';
 

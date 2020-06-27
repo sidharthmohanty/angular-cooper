@@ -1,4 +1,4 @@
-<div class="min-vh-100">
+<div class="min-vh-100 wrapper">
   <nav
     class="navbar sticky-top flex-md-nowrap navbar-expand-lg d-flex justify-content-between"
   >
@@ -22,193 +22,180 @@
       </div>
     </div>
   </nav>
-  <!-- <a
-    type="button"
-    id="right-icon"
-    aria-expanded="false"
-    (click)="toggle()"
-    [class]="rightIcon"
-  >
-    <ion-icon
-      src="../../assets/svg/dropdown-arrow.svg"
-      class="toggle-out mt-2"
-    ></ion-icon>
-  </a> -->
-  <div class="d-flex">
-    <div class="bg-light sidebar">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link d-flex" href="#">
-            <ion-icon
-              src="../../assets/svg/vector.svg"
-              class="side-home"
-            ></ion-icon>
-            <span [class]="sideIcon">Home</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex" href="#">
-            <ion-icon
-              src="../../assets/svg/half_square.svg"
-              class="side-order"
-            ></ion-icon>
-            <span [class]="sideIcon">
-              Add PGT Order
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex" href="#">
-            <ion-icon
-              src="../../assets/svg/calendar.svg"
-              class="side-courier"
-            ></ion-icon>
-            <span [class]="sideIcon">
-              Schedule Courier
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex" href="#">
-            <ion-icon
-              src="../../assets/svg/copy.svg"
-              class="side-info"
-            ></ion-icon>
-            <span [class]="sideIcon">
-              Submit Biopsy Information
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex" href="#">
-            <ion-icon
-              src="../../assets/svg/reload.svg"
-              class="side-results"
-            ></ion-icon>
-            <span [class]="sideIcon">
-              Pending PGT Results
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex" href="#">
-            <ion-icon
-              src="../../assets/svg/hexagon.svg"
-              class="side-pgt"
-            ></ion-icon>
-            <span [class]="sideIcon">Reported PGT Results</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex" href="#">
-            <ion-icon
-              src="../../assets/svg/signal.svg"
-              class="side-analytics"
-            ></ion-icon>
-            <span [class]="sideIcon">Analytics</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex" href="#">
-            <ion-icon
-              src="../../assets/svg/kits.svg"
-              class="side-kits"
-            ></ion-icon>
-            <span [class]="sideIcon">
-              Order Kits
-            </span>
-          </a>
-        </li>
-      </ul>
-      <div class="toggle">
-        <a
-          type="button"
-          id="sidebar"
-          aria-expanded="false"
-          class="float-right"
-          (click)="toggle()"
-        >
+  <!-- <div class="d-flex body-holder"> -->
+  <div class="bg-light sidebar">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#">
           <ion-icon
-            src="../../assets/svg/dropdown-arrow.svg"
-            [class]="toggleSide"
+            src="../../assets/svg/vector.svg"
+            class="side-home"
           ></ion-icon>
+          <span [class]="sideIcon">Home</span>
         </a>
-      </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#">
+          <ion-icon
+            src="../../assets/svg/half_square.svg"
+            class="side-order"
+          ></ion-icon>
+          <span [class]="sideIcon">
+            Add PGT Order
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#">
+          <ion-icon
+            src="../../assets/svg/calendar.svg"
+            class="side-courier"
+          ></ion-icon>
+          <span [class]="sideIcon">
+            Schedule Courier
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#">
+          <ion-icon
+            src="../../assets/svg/copy.svg"
+            class="side-info"
+          ></ion-icon>
+          <span [class]="sideIcon">
+            Submit Biopsy Information
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#">
+          <ion-icon
+            src="../../assets/svg/reload.svg"
+            class="side-results"
+          ></ion-icon>
+          <span [class]="sideIcon">
+            Pending PGT Results
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#">
+          <ion-icon
+            src="../../assets/svg/hexagon.svg"
+            class="side-pgt"
+          ></ion-icon>
+          <span [class]="sideIcon">Reported PGT Results</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#">
+          <ion-icon
+            src="../../assets/svg/signal.svg"
+            class="side-analytics"
+          ></ion-icon>
+          <span [class]="sideIcon">Analytics</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#">
+          <ion-icon
+            src="../../assets/svg/kits.svg"
+            class="side-kits"
+          ></ion-icon>
+          <span [class]="sideIcon">
+            Order Kits
+          </span>
+        </a>
+      </li>
+    </ul>
+    <div class="toggle">
+      <a
+        type="button"
+        id="sidebar"
+        aria-expanded="false"
+        class="float-right"
+        (click)="toggle()"
+      >
+        <ion-icon
+          src="../../assets/svg/dropdown-arrow.svg"
+          [class]="toggleSide"
+        ></ion-icon>
+      </a>
     </div>
-    <main class="main d-flex flex-column">
-      <div class="d-flex content-holder">
-        <div class="notifications col-md-6">
-          <div class="card-header head-text pt-light">Notifications</div>
-          <div class="d-flex not-content">
-            <div class="d-flex flex-column">
-              <div class="sub-head pt-demi">45</div>
-              <div class="sub-content pt-book">Reported PGT Cases</div>
-              <div class="know-more d-flex">
-                <span class="mt-1 pt-book">Know more</span>
-                <ion-icon
-                  src="../../assets/svg/dropdown-arrow.svg"
-                  class="toggle-out mt-2 ml-1 dropdown"
-                ></ion-icon>
-              </div>
-            </div>
-            <div class="d-flex flex-column">
-              <div class="sub-head pt-demi">55</div>
-              <div class="sub-content pt-book">Pending PGT Cases</div>
-              <div class="know-more d-flex">
-                <span class="mt-1 pt-book">Know more</span>
-                <ion-icon
-                  src="../../assets/svg/dropdown-arrow.svg"
-                  class="toggle-out mt-2 ml-1"
-                ></ion-icon>
-              </div>
-            </div>
-            <div class="d-flex flex-column">
-              <div class="sub-head pt-demi">10K<sup>+</sup></div>
-              <div class="sub-content pt-book">Euploid Embryos</div>
-              <div class="know-more d-flex">
-                <span class="mt-1 pt-book">Know more</span>
-                <ion-icon
-                  src="../../assets/svg/dropdown-arrow.svg"
-                  class="toggle-out mt-2 ml-1"
-                ></ion-icon>
-              </div>
+  </div>
+  <main class="main d-flex flex-column">
+    <div class="d-flex content-holder">
+      <div class="notifications col-md-6">
+        <div class="card-header head-text pt-light">Notifications</div>
+        <div class="d-flex not-content">
+          <div class="d-flex flex-column">
+            <div class="sub-head pt-demi">45</div>
+            <div class="sub-content pt-book">Reported PGT Cases</div>
+            <div class="know-more">
+              <span class="mt-1 pt-book">Know more</span>
+              <ion-icon
+                src="../../assets/svg/dropdown-arrow.svg"
+                class="km-logo"
+              ></ion-icon>
             </div>
           </div>
-        </div>
-        <div class="analytics col-md-6">
-          <div class="card-header head-text pt-light">Analytics</div>
-          <div class="analytics-content">
-            <img
-              src="../../assets/images/analytics.png"
-              alt="analytics"
-              class="chart"
-            />
+          <div class="d-flex flex-column">
+            <div class="sub-head pt-demi">55</div>
+            <div class="sub-content pt-book">Pending PGT Cases</div>
+            <div class="know-more">
+              <span class="mt-1 pt-book">Know more</span>
+              <ion-icon
+                src="../../assets/svg/dropdown-arrow.svg"
+                class="km-logo"
+              ></ion-icon>
+            </div>
+          </div>
+          <div class="d-flex flex-column">
+            <div class="sub-head pt-demi">10K<sup>+</sup></div>
+            <div class="sub-content pt-book">Euploid Embryos</div>
+            <div class="know-more">
+              <span class="mt-1 pt-book">Know more</span>
+              <ion-icon
+                src="../../assets/svg/dropdown-arrow.svg"
+                class="km-logo"
+              ></ion-icon>
+            </div>
           </div>
         </div>
       </div>
-      <!--Banner container-->
-      <div class="d-flex justify-content-center mt-5">
-        <div class="footer-image-container">
+      <div class="analytics col-md-6">
+        <div class="card-header head-text pt-light">Analytics</div>
+        <div class="analytics-content">
           <img
-            src="../../assets/logo/banner.png"
-            alt="image"
-            class="footer-image"
+            src="../../assets/images/analytics.png"
+            alt="analytics"
+            class="chart"
           />
         </div>
       </div>
-      <div class="d-flex mt-auto justify-content-center">
-        <footer>
-          <div class="artisan">
-            <span class="pt-book text-muted">Powered by </span>
-
-            <img
-              src="../../assets/logo/artisan-logo.png"
-              alt=""
-              class="artisan-logo"
-            />
-          </div>
-        </footer>
+    </div>
+    <!--Banner container-->
+    <div class="d-flex justify-content-center mt-5">
+      <div class="footer-image-container">
+        <img
+          src="../../assets/logo/banner.png"
+          alt="image"
+          class="footer-image"
+        />
       </div>
-    </main>
-  </div>
+    </div>
+    <div class="d-flex mt-auto justify-content-center">
+      <footer>
+        <div class="artisan">
+          <span class="pt-book text-muted">Powered by </span>
+
+          <img
+            src="../../assets/logo/artisan-logo.png"
+            alt=""
+            class="artisan-logo"
+          />
+        </div>
+      </footer>
+    </div>
+  </main>
 </div>

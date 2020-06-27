@@ -1,31 +1,44 @@
+.body-holder {
+  height: 92vh;
+}
 .navbar {
   position: sticky;
   width: 100%;
   background-color: #e6f7fc !important;
   border-bottom: 2px solid #a2e1f4;
+  height: 8vh;
 }
-.sidebar {
+.wrapper .sidebar {
+  position: fixed;
+  height: 100%;
   background-color: var(--mainBlue) !important;
-  padding: 0px !important;
-  max-width: 125px !important;
-  overflow: auto;
+  max-width: 9rem !important;
+  overflow-y: visible;
+  transition: all 0.3s ease;
   /* width: 17%; */
-  height: auto;
 }
 .nav-item > a {
   color: whitesmoke !important;
-  font-size: 0.8rem;
   line-height: normal;
 }
 .content {
 }
 
 .toggle-in {
+  color: white;
   transform: rotate(90deg);
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-size: 2rem;
 }
 .toggle-out {
+  color: white;
   transform: rotate(-90deg);
+  font-size: 2rem;
+}
+.km-logo {
   color: var(--headTextLigtBlue);
+  transform: rotate(-90deg);
   font-size: 2rem;
 }
 
@@ -41,7 +54,7 @@
   font-size: 1.25rem;
   margin-top: 0.5rem;
 }
-.side-info {
+/* .side-info {
   font-size: 1.2rem;
 }
 .side-results {
@@ -55,7 +68,7 @@
 }
 .side-kits {
   font-size: 1rem;
-}
+} */
 .know {
   font-size: 1rem;
 }
@@ -70,13 +83,23 @@
 .nav-item:hover {
   background-color: var(--lightBlue);
 }
+
+.side-label {
+  transition: all 1s ease;
+}
+.d-none {
+  transition: all 1s ease;
+}
+
 .nav-item:hover .side-label {
   color: white;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .nav-link {
   padding: 18px 15px;
+  height: 3.5rem;
+  align-items: center;
 }
 
 .col-md-2 {
@@ -88,7 +111,7 @@
   border-bottom: transparent;
 }
 
-.main {
+.wrapper .main {
   min-height: 90vh;
   padding-left: 20px;
   padding-right: 20px;
@@ -203,9 +226,9 @@
 .fa-bars {
   color: var(--headTextDarkBlue);
 }
-.toggle {
+/* .toggle {
   padding: 10px 10px 0px 0px;
-}
+} */
 
 .example-sidenav-content {
   display: flex;
