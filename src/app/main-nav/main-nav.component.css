@@ -193,7 +193,7 @@ ul {
   margin-top: 1.5rem;
   border-bottom: 1px solid lightgray;
   padding-bottom: 2rem;
-  height: 4rem;
+  height: 5rem;
   line-height: normal;
 }
 .know-more {
@@ -256,9 +256,10 @@ ul {
 }
 
 .chart {
-  width: 90%;
+  width: 95%;
   border: 1px solid lightgray;
   border-radius: 5px;
+  height: 14rem;
 }
 .sticky-top {
   position: sticky !important;
@@ -284,7 +285,7 @@ ul {
 .first-container {
   border-right: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 4rem 1.5rem;
 }
 .km-holder {
   margin-top: 0.5rem;
@@ -299,7 +300,7 @@ ul {
 }
 
 .second-container {
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 4rem 1.5rem;
 }
 .second-content {
   display: flex;
