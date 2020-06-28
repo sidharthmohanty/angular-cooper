@@ -290,6 +290,10 @@ ul {
   margin-top: 0.5rem;
 }
 
+.banner-container {
+  margin-top: 2rem;
+}
+
 .card-body {
   padding: 0rem;
 }
@@ -302,6 +306,7 @@ ul {
   margin-top: 3rem;
   justify-content: center;
 }
+
 @media (max-width: 576px) {
   .not-content {
     margin-top: 3rem;
@@ -377,9 +382,6 @@ ul {
 @media (min-width: 768px) {
   .sub-head {
     font-size: calc(12px + 8vh);
-  }
-  .first-container {
-    padding: 2rem 1.5rem 3rem 1.5rem;
   }
   .clinic {
     margin-top: 2px;
