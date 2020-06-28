@@ -6,6 +6,7 @@
   --lightBlue: #3cafdb;
   --headTextLigtBlue: #4ca0b1;
   --headTextDarkBlue: #156699;
+  --navBlue: #e6f7fc;
 }
 @font-face {
   font-family: ptLight;
@@ -91,7 +92,10 @@
 html,
 body {
   height: 100%;
-}
-body {
   margin: 0;
+  padding: 0;
+}
+* {
+  list-style: none;
+  text-decoration: none;
 }
