@@ -309,8 +309,17 @@ ul {
 }
 
 @media (max-width: 576px) {
+  .first-container {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+  .second-container {
+    padding: 1rem 1rem 2rem 1rem;
+  }
   .not-content {
-    margin-top: 3rem;
+    margin-top: 2rem;
+  }
+  .second-content {
+    margin-top: 2rem;
   }
   .brand-logo {
     width: 6rem;
@@ -379,6 +388,8 @@ ul {
   .clinic {
     margin-top: -7px;
   }
+  .sub-content {
+  }
 }
 @media (min-width: 768px) {
   .sub-head {
@@ -393,7 +404,7 @@ ul {
     font-size: calc(20px + 7vh);
   }
   .sub-content {
-    font-size: calc(1rem + 1vh);
+    font-size: calc(0.8rem + 1vh);
   }
 }
 
